@@ -1,0 +1,30 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "start:prod": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "ng build --enviroment=prod"
+  },
+  "author": "Ramiro Ruiz",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "crypto": "^1.0.1",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.13.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
