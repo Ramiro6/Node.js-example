@@ -7,7 +7,7 @@
     "start": "nodemon index.js",
     "start:prod": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "ng build --enviroment=prod"
+    "postinstall": "./client/ng build --enviroment=prod"
   },
   "author": "Ramiro Ruiz",
   "license": "MIT",
