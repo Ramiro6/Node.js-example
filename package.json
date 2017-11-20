@@ -6,8 +6,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "start:prod": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "npm install ng build --environment=prod cd client"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ramiro Ruiz",
   "license": "MIT",
