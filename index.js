@@ -40,7 +40,7 @@ const port = process.env.PORT || 3000
 
 // app.use(express.static(__dirname + '/dist/'));
 
-app.use(express.static(path.join(process.cwd(), '/dist/')))
+app.use(express.static(path.join(process.cwd(), '/dist/index.html')))
 
 app.use('/api', router.app)
 app.use('/api', auth.app)
@@ -50,7 +50,7 @@ async function Start() {
     mongoose.Promise = global.Promise;
     await mongoose.connect(url.URLDATABASE, { useMongoClient: true })
     console.log('DATABASE ON!!')
-    http.listen(port, () => {
+    app.listen(port, () => {
         console.log(`API RES ON ${port}`)
     })
 }
