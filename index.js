@@ -42,6 +42,9 @@ const port = process.env.PORT || 3000
 
 app.use(express.static(path.join(process.cwd(), '/dist/index.html')))
 
+app.get('/*', (req, res) => {
+    res.sendfile(path.join(__dirname + '/dist/index.html'))
+})
 app.use('/api', router.app)
 app.use('/api', auth.app)
 
