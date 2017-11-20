@@ -26,15 +26,15 @@ app.use(express.static(__dirname + '/dist'));
 
 const port = process.env.PORT || 3000
 
-if ( port === 'development' || 3000 ) {
-    console.log(port)
+// if ( port === 'development' || 3000 ) {
+//     console.log(port)
     app.use((req, res, next) => {
         res.setHeader('Access-Control-Allow-Origin', '*')
         res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Request-With, Content-Type, Accept')
         res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PATH, DELETE, OPTIONS')
         next()
     })
-}
+// }
 
 // app.use(express.static(path.join(process.cwd(), 'dist')))
 
