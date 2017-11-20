@@ -7,7 +7,7 @@
     "start": "nodemon index.js",
     "start:prod": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "npm install ng buld --aot --prod cd client"
+    "postinstall": "npm install ng build --aot --prod cd client"
   },
   "author": "Ramiro Ruiz",
   "license": "MIT",
