@@ -22,7 +22,7 @@ app.use(expressSession({
 }))
 app.use(passport.initialize())
 app.use(passport.session())
-
+app.use(express.static(__dirname + '/dist'));
 
 const port = process.env.PORT || 3000
 
@@ -37,7 +37,7 @@ if ( port === 'development' || 3000 ) {
 }
 
 // app.use(express.static(path.join(process.cwd(), 'dist')))
-app.use(express.static(__dirname + '/dist'));
+
 app.use('/api', router.app)
 app.use('/api', auth.app)
 
