@@ -37,10 +37,10 @@ if ( port === 'development' || 3000 ) {
 }
 
 // app.use(express.static(path.join(process.cwd(), 'dist')))
-
+app.use(express.static(__dirname + '/dist'));
 app.use('/api', router.app)
 app.use('/api', auth.app)
-app.use(express.static(__dirname + '/dist'));
+
 
 async function Start() {
     mongoose.Promise = global.Promise;
