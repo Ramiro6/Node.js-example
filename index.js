@@ -48,7 +48,7 @@ async function Start() {
     mongoose.Promise = global.Promise;
     await mongoose.connect(url.URLDATABASE, { useMongoClient: true })
     console.log('DATABASE ON!!')
-    app.server(port, () => {
+    app.listen(port, () => {
         console.log(`API RES ON ${port}`)
     })
 }
