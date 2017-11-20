@@ -24,7 +24,7 @@ app.use(body.json())
 // }))
 // app.use(passport.initialize())
 // app.use(passport.session())
-app.use(express.static(__dirname + '/dist'));
+
 
 const port = process.env.PORT || 3000
 
@@ -37,6 +37,8 @@ const port = process.env.PORT || 3000
         next()
     })
 // }
+
+app.use(express.static(__dirname + '/dist/'));
 
 // app.use(express.static(path.join(process.cwd(), 'dist')))
 
