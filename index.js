@@ -11,6 +11,8 @@ const passport = require('passport')
 const config = require('./config')
 const app = express()
 const path = require('path')
+var http = require('http');
+var server = http.createServer(app);
 
 app.use(body.urlencoded({ extended: true }))
 app.use(body.json())
