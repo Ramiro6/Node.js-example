@@ -14,14 +14,14 @@ const path = require('path')
 
 app.use(body.urlencoded({ extended: true }))
 app.use(body.json())
-app.use(cookieParser())
-app.use(expressSession({
-    secret: config.secret,
-    resave: false,
-    saveUninitialized: false
-}))
-app.use(passport.initialize())
-app.use(passport.session())
+// app.use(cookieParser())
+// app.use(expressSession({
+//     secret: config.secret,
+//     resave: false,
+//     saveUninitialized: false
+// }))
+// app.use(passport.initialize())
+// app.use(passport.session())
 app.use(express.static(__dirname + '/dist'));
 
 const port = process.env.PORT || 3000
