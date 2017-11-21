@@ -38,7 +38,8 @@ const port = process.env.PORT || 3000
     })
 // }
 
-app.use(express.static(__dirname + 'client/dist'));
+// app.use(express.static(__dirname + 'client/dist'));
+app.use(express.static(path.join(__dirname, 'client/dist')))
 
 // app.use(express.static(path.join(process.cwd(), '/dist')))
 
