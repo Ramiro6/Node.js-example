@@ -38,13 +38,11 @@ const port = process.env.PORT || 3000
     })
 // }
 
-// app.use(express.static(__dirname + '/dist/'));
+app.use(express.static(__dirname + 'client/dist'));
 
-app.use(express.static(path.join(process.cwd(), '/dist')))
+// app.use(express.static(path.join(process.cwd(), '/dist')))
 
-app.get('/*', (req, res) => {
-    res.sendfile(path.join('/dist/index.html'))
-})
+
 app.use('/api', router.app)
 app.use('/api', auth.app)
 
