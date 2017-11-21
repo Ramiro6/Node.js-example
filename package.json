@@ -7,7 +7,7 @@
     "start": "nodemon index.js",
     "start:prod": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "(cd client)"
+    "postinstall": "(cd client && npm install)"
   },
   "author": "Ramiro Ruiz",
   "license": "MIT",
